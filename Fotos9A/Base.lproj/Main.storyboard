@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Fotos9A" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wmb-rc-iFv">
+                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BtX-wy-Urf">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="763"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="BtX-wy-Urf" firstAttribute="centerY" secondItem="Wmb-rc-iFv" secondAttribute="centerY" id="eA1-Xk-Hxs"/>
+                                    <constraint firstItem="BtX-wy-Urf" firstAttribute="centerX" secondItem="Wmb-rc-iFv" secondAttribute="centerX" id="g0Q-iI-vwq"/>
+                                    <constraint firstItem="BtX-wy-Urf" firstAttribute="height" secondItem="Wmb-rc-iFv" secondAttribute="height" id="mVz-7t-Lkv"/>
+                                    <constraint firstItem="BtX-wy-Urf" firstAttribute="width" secondItem="Wmb-rc-iFv" secondAttribute="width" id="xCM-BD-chH"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="PUs-dg-X3D"/>
+                                </connections>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkK-g2-K5e">
+                                <rect key="frame" x="332" y="52" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="lga-QP-YL2"/>
+                                    <constraint firstAttribute="height" constant="48" id="ywa-8V-ME9"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="menu.png"/>
+                                <connections>
+                                    <action selector="mostrarMenu" destination="BYZ-38-t0r" eventType="touchUpInside" id="o4q-dT-A8e"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3g9-Pm-hF1">
+                                <rect key="frame" x="0.0" y="398" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="FWt-2h-0om"/>
+                                    <constraint firstAttribute="height" constant="48" id="qsj-4H-XNH"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="left arrow.png"/>
+                                <connections>
+                                    <action selector="irAnterior" destination="BYZ-38-t0r" eventType="touchUpInside" id="v44-oB-avv"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAJ-X4-218">
+                                <rect key="frame" x="342" y="398" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="HGc-mx-uQ5"/>
+                                    <constraint firstAttribute="width" constant="48" id="VpZ-Ho-gKR"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="right arrow.png"/>
+                                <connections>
+                                    <action selector="irSiguiente" destination="BYZ-38-t0r" eventType="touchUpInside" id="PO6-RA-k59"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1P-QM-f4C">
+                                <rect key="frame" x="224" y="755" width="161" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="161" id="8Tc-xo-22T"/>
+                                    <constraint firstAttribute="height" constant="45" id="zcr-Vz-GYc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="37"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YAJ-X4-218" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3W0-9b-KtL"/>
+                            <constraint firstItem="CkK-g2-K5e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="DIB-Q7-gaq"/>
+                            <constraint firstItem="Wmb-rc-iFv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Q0R-4Z-GxH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a1P-QM-f4C" secondAttribute="trailing" constant="5" id="QVr-JJ-h7o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YAJ-X4-218" secondAttribute="trailing" id="Rd0-bk-k6y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a1P-QM-f4C" secondAttribute="bottom" constant="10" id="VA8-3v-fMI"/>
+                            <constraint firstItem="3g9-Pm-hF1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bRV-pm-QwY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CkK-g2-K5e" secondAttribute="trailing" constant="10" id="eZV-6O-hCZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Wmb-rc-iFv" secondAttribute="bottom" id="geR-Pl-DIo"/>
+                            <constraint firstItem="3g9-Pm-hF1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hzT-6t-nhM"/>
+                            <constraint firstItem="Wmb-rc-iFv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kGS-k0-gab"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wmb-rc-iFv" secondAttribute="trailing" id="xXi-nX-bPE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnAnterior" destination="3g9-Pm-hF1" id="MLC-BD-rrh"/>
+                        <outlet property="btnSiguiente" destination="YAJ-X4-218" id="ngW-hb-VHE"/>
+                        <outlet property="imvImagen" destination="BtX-wy-Urf" id="TPX-QV-sNC"/>
+                        <outlet property="lblContador" destination="a1P-QM-f4C" id="mz0-is-PkN"/>
+                        <outlet property="scrImagen" destination="Wmb-rc-iFv" id="efp-KP-wp1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="195" y="-3"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="left arrow.png" width="48" height="48"/>
+        <image name="menu.png" width="48" height="48"/>
+        <image name="right arrow.png" width="48" height="48"/>
+    </resources>
+</document>
